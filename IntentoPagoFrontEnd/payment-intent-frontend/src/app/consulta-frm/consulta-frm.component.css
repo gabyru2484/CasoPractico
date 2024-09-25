@@ -1,0 +1,105 @@
+/* Estilo para el título */
+h1 {
+    color: #333;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    margin-bottom: 20px;
+    font-size: 14px;
+  }
+  
+  /* Estilo para la tabla */
+  table {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    border-spacing: 10px;
+    border: 1px solid #ccc;
+  }
+  
+  /* Estilo para las celdas del formulario */
+  li {
+    padding: 10px;
+    font-family: 'Arial', sans-serif;
+    font-size: 12px;
+  }
+  
+  thead{
+    padding: 5px;
+    font-family: 'Arial', sans-serif;
+    font-size: 12px;
+  }
+
+  tbody{
+    padding: 5px;
+    font-family: 'Arial', sans-serif;
+    font-size: 12px;
+  }
+  
+  td {
+    padding: 5px;
+    font-family: 'Arial', sans-serif;
+    font-size: 12px;
+   
+  }
+  /* Estilo para los inputs y select */
+  input,
+  select,
+  textarea{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Arial', sans-serif;
+    font-size: 12px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+  }
+  
+  /* Cambia el borde cuando el input tiene el foco */
+  input:focus,
+  select:focus,
+  textarea:focus {
+    border-color: #d65106;
+    outline: none;
+  }
+  
+  /* Estilo específico para el campo Nombre Completo */
+  input#nombreCompleto {
+    text-transform: uppercase; /* Aplica mayúsculas */
+  }
+  
+  /* Estilo para el botón de enviar */
+  button[type="submit"] {
+    background-color: #d65106;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-family: 'Arial', sans-serif;
+    font-size: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    width: 100%;
+  }
+  
+  /* Cambia el estilo del botón cuando está deshabilitado */
+  button[disabled] {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  /* Estilo para mensajes de éxito */
+  div[style*="green"] {
+    color: #28a745;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  /* Estilo general para el formulario */
+  form {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  }
+  

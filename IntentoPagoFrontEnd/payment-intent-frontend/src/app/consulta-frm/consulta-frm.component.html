@@ -1,0 +1,32 @@
+<form>
+<h1>Consulta de Intenciones de Pago</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nombre Completo</th>
+      <th>Tipo de Identificación</th>
+      <th>Número de Identificación</th>
+      <th>Teléfono de Contacto</th>
+      <th>Correo Electrónico</th>
+      <th>Monto Deuda</th>
+      <th>Monto Propuesto</th>
+      <th>Número de Cuotas Propuestas</th>
+      <th>Comentarios Adicionales</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let intencion of intencionPagos">
+      <td>{{ intencion.nombreCompleto }}</td>
+      <td>{{ obtenerTipoIdentificacion(intencion.tipoIdentificacion) }}</td>
+      <td>{{ intencion.numeroIdentificacion }}</td>
+      <td>{{ intencion.telefonoContacto }}</td>
+      <td>{{ intencion.correoElectronico }}</td>
+      <td>{{ intencion.montoDeuda }}</td>
+      <td>{{ intencion.montoPropuesto }}</td>
+      <td>{{ intencion.numeroCuotasPropuestas }}</td>
+      <td>{{ intencion.comentariosAdicionales || 'N/A' }}</td>
+    </tr>
+  </tbody>
+</table>
+</form>

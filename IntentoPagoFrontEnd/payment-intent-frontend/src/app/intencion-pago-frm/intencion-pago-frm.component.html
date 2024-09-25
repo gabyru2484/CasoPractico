@@ -1,0 +1,72 @@
+<form [formGroup]="intencionPagoForm" (ngSubmit)="onSubmit()">
+  <table style="border-collapse: collapse;">
+    <tr>
+      <td>
+        <h1>PAGUE YA</h1> 
+      </td>
+      <td>
+        <h1>Formulario de Intención de Pago</h1> 
+      </td>
+    </tr>
+    <tr>
+      <td><label for="nombreCompleto">Nombre Completo:<span style="color: red;">*</span></label></td>
+      <td><input id="nombreCompleto" formControlName="NombreCompleto" maxlength="120" required style="text-transform: uppercase;"></td>
+    </tr>
+    <tr>
+      <td><label for="tipoIdentificacion">Tipo de Identificación:<span style="color: red;">*</span></label></td>
+      <td>
+        <select id="tipoIdentificacion" formControlName="TipoIdentificacion" required>
+          <option value="">Seleccionar...</option>
+          <option value="1">Cédula</option>
+          <option value="2">Pasaporte</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td><label for="numeroIdentificacion">Número de Identificación:<span style="color: red;">*</span></label></td>
+      <td><input id="numeroIdentificacion" formControlName="NumeroIdentificacion" maxlength="10" required></td>
+    </tr>
+    <tr>
+      <td><label for="telefonoContacto">Teléfono de Contacto:<span style="color: red;">*</span></label></td>
+      <td>
+        <input 
+          id="telefonoContacto" 
+          formControlName="TelefonoContacto" 
+          required 
+          type="tel" 
+          maxlength="10" 
+          pattern="^\d{10}$" 
+          title="El teléfono debe tener 10 dígitos."
+          placeholder="Ej: 0991234567"
+          (input)="onlyNumbers($event)">
+      </td>
+    </tr>
+    <tr>
+      <td><label for="correoElectronico">Correo Electrónico:<span style="color: red;">*</span></label></td>
+      <td><input id="correoElectronico" type="email" formControlName="CorreoElectronico" required></td>
+    </tr>
+    <tr>
+      <td><label for="montoDeuda">Monto Deuda:<span style="color: red;">*</span></label></td>
+      <td><input id="montoDeuda" type="number" formControlName="MontoDeuda" required min="0.01"></td>
+    </tr>
+    <tr>
+      <td><label for="montoPropuesto">Monto Propuesto:<span style="color: red;">*</span></label></td>
+      <td><input id="montoPropuesto" type="number" formControlName="MontoPropuesto" required min="0.01"></td>
+    </tr>
+    <tr>
+      <td><label for="numeroCuotasPropuestas">Número de Cuotas Propuestas:<span style="color: red;">*</span></label></td>
+      <input id="numeroCuotasPropuestas" type="text" formControlName="NumeroCuotasPropuestas" required pattern="^\d{1,2}$" maxlength="2" title="Ingrese 1 o 2 dígitos.">
+    </tr>
+
+    <tr>
+      <td><label for="comentariosAdicionales">Comentarios Adicionales:</label></td>
+      <td><textarea id="comentariosAdicionales" formControlName="ComentariosAdicionales" maxlength="400" style="text-transform: uppercase;"></textarea></td>
+    </tr>
+    <div *ngIf="mensajeExito" style="margin-top: 10px; color: green;">
+      {{ mensajeExito }}
+    </div>
+    <tr>
+      <td colspan="2"><button type="submit" [disabled]="!intencionPagoForm.valid">Enviar</button></td>
+    </tr>
+  </table>
+</form>

@@ -1,0 +1,22 @@
+@IntentoPagoApi_HostAddress = http://localhost:5017
+
+### Crear Intención de Pago
+POST {{IntentoPagoApi_HostAddress}}/api/IntencionPago
+Content-Type: application/json
+Accept: application/json
+
+{
+  "nombreCompleto": "Juan Pérez",
+  "tipoIdentificacion": 1,
+  "numeroIdentificacion": "1234567890",
+  "telefonoContacto": "0987654321",
+  "correoElectronico": "juan@example.com",
+  "montoDeuda": 1000.00,
+  "montoPropuesto": 100.00,
+  "numeroCuotasPropuestas": 10,
+  "comentariosAdicionales": "Interesado en el plan"
+}
+
+### Obtener Intenciones de Pago
+GET {{IntentoPagoApi_HostAddress}}/api/IntencionPago
+Accept: application/json

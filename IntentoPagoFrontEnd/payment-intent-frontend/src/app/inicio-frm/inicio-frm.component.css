@@ -1,0 +1,56 @@
+/* Centrar el contenedor de la tabla */
+html, body {
+    height: 100%; /* Asegurarse de que el contenedor ocupe toda la altura de la ventana */
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%; /* Asegura que el contenedor ocupe toda la altura */
+}
+  
+  /* Estilo de la tabla */
+  table {
+    max-width: 500px;
+    margin: 0 auto;
+    border-spacing: 10px;
+  }
+  
+  /* Estilo para el texto dentro de la tabla */
+  table td {
+    text-align: left;
+    vertical-align: top;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+  }
+  
+  /* Estilo para el título principal (h1) */
+  h1 {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  /* Estilo para subtítulos (h2 y h3) */
+  h2, h3 {
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+  
+  /* Estilo para las listas */
+  ul {
+    margin-left: 20px;
+  }
+  
+  /* Estilo para los párrafos */
+  p {
+    margin-bottom: 12px;
+  }
+  

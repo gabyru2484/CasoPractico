@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "Jt9r1NI/1cfFzEac+Eff6JmTWIC2Hz80Mqa6Isd/H6E=",
+  "Source": "IntentoPagoApi",
+  "BasePath": "_content/IntentoPagoApi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
